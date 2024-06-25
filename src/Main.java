@@ -15,9 +15,7 @@ public class Main {
         for (int i=0;i<n;i++)
             for (int j=0 ; j<= n/2 ; j++)
             {
-                if (arr[i][j] == arr[i][n-j-1])
-                    continue;
-                else
+                if (arr[i][j] != arr[i][n-j-1])
                     palindrome = false;
             }
 
@@ -25,12 +23,10 @@ public class Main {
         for (int j=0;j<n;j++)
             for (int i=0 ; i<= n/2 ; i++)
             {
-                if (arr[i][j] == arr[i][n-j-1])
-                    continue;
-                else
+                if (arr[i][j] != arr[i][n-j-1])
                     palindrome = false;
             }
-        if (palindrome == true)
+        if (palindrome)
             System.out.println("Yes");
         else
             System.out.println("No");
